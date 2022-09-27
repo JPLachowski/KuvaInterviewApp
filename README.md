@@ -56,3 +56,40 @@ As our projects get larger and more complex, it becomes harder to manage our app
 More information about Redux can be found [here](https://redux.js.org/introduction/getting-started).\
 More information about React Context can be found [here](https://reactjs.org/docs/context.html).
 
+
+Done
+- Right & Left Arrow Buttons
+    -Used JavaScript HTML DOM EventListener, then looked at the current image then added one or substracted one depending on if it was left or right
+- Display Image Metadata
+    -looks at the images, then current image in the array, then found id,overallConfig,detectionslist.lenght,noisefloormetric in div
+- Navigation Bar
+    -Nav Bar needs React Router as it will become a application with multiple page routes
+
+Needed to do
+- Must: Clean file structure, styling and make everything looks pretty
+- Filter Images
+    -many different ways to filter images
+        -filter by id
+        -filter by all the different meta data that is happening  
+- Redux/Context (hooks context)
+    - state immutable object in js to use the state, client side database, one way data flow to make sure that data is predictable and testable. 
+    - state is alot easier to use and manage with a state manager. 
+    - can get complex pretty fast
+
+- Add Detection Boxes
+    -add a true of false button, use app to update the endpoint of the API so that something can display to be there
+- Switch Selected Cameras 
+    -Switch camera multiple different ways of doing this,
+    filter by location, list of all different camera for customer, left and right button, filter based off meta data, filter based of detections or issues 
+
+Ideas for the future 
+- location of all hooks on google maps
+- compare side by side cameras 
+- display all camera at once(big screen)
+- more meta data so that more analysis can be done 
+- notes for camera, client can name cameras
+- 
+
+Big Ideas High level ideas
+- compare all the data from all different clients
+    - clients can we all date and see how there cameras are compared to other cameras

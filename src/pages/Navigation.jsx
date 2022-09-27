@@ -8,7 +8,7 @@ const Navigation = () => {
     <Link to="/" className="navigation"> Camera </Link>
     <Link to="/" className="navigation"> Settings </Link>
     <Link to="/" className="navigation"> Account </Link>
-    <Link to="/" className="navigation"> Settings </Link>
+    <Link to="/" className="navigation"> Locations </Link>
     <Link to="/" className="navigation"> Contact </Link>
   </Router>
   )
