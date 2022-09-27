@@ -65,7 +65,9 @@ function App() {
           height: "100%",
         }}
       >
-        {/*This button looks at Previous Image*/}
+        {/*This button looks at Previous Image
+        //Does not equal zero for image index
+        */}
         <button type="button" onClick={() => setCurrentImageIndex((prevImage) => 
         (currentImageIndex === 0? currentImageIndex : currentImageIndex - 1 ))}>
           Previous Image
@@ -103,7 +105,8 @@ function App() {
          //when button is clicked will run function looks at what image we are currently at
          //then it adds one
         */}
-        <button type="button" onClick={() => setCurrentImageIndex((prevImage) => currentImageIndex + 1)}>Next Image
+        <button type="button" onClick={() => setCurrentImageIndex((prevImage) => currentImageIndex === 0? currentImageIndex 
+          : currentImageIndex + 1)}>Next Image
         </button>
       </div>
     //</div>
