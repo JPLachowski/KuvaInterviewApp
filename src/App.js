@@ -7,6 +7,9 @@ function App() {
   const baseURL = "http://localhost:7071";
   const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isError, setIsError] = useState(false);
+  const [initialState, setInitialState] = useState;
+
 
   //TODO: API functions (more to be added) should be in their own file!
   const getEvents = () => {
@@ -25,6 +28,16 @@ function App() {
   useEffect(() => {
     getEvents();
   }, []);
+
+  ////
+  //useEffect(() => {
+  //  getEvents();
+  //}, [isError]);
+  // if(!initialState) return null;
+  ////
+  //After this you could have return where you have a return of the error that is going on
+  //Probably good idea to ahve in in another file so that it will be clearer and easy to add
+  //more things
 
   return (
     //TODO: This code should be factored out into multiple files
@@ -77,5 +90,5 @@ function App() {
     </div>
   );
 }
-
+  
 export default App;
