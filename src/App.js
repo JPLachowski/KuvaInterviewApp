@@ -17,6 +17,7 @@ function App() {
       .get(`${baseURL}/events`)
       .then(function (response) {
         setImages(response.data.scanResults);
+        infoList(response.data)// added infolist and the response data
         console.log(response);
       })
       .catch(function (error) {
