@@ -83,7 +83,7 @@ Needed to do
     filter by location, list of all different camera for customer, left and right button, filter based off meta data, filter based of detections or issues 
 
 Ideas for the future 
-- location of all hooks on google maps
+- location of all cameras on google maps
 - compare side by side cameras 
 - display all camera at once(big screen)
 - more meta data so that more analysis can be done 
