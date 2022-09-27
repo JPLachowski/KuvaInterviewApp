@@ -94,10 +94,10 @@ function App() {
           {/* Finish adding image metadata!
           //get is display ID, Confidence Levels, Number of detections and noise floor metric
             */}
-          <div> Image Metadata: {images[currentImageIndex]?.id} </div>
-          <div> Confidence Levels: {images[currentImageIndex]?.overallConf} </div>
-          <div> Number of Detections: {images[currentImageIndex]?.detectionsList.length} </div>
-          <div> Noise Floor Metric: {images[currentImageIndex]?.noiseFloorMetric} </div>
+          <div class = "ImageMetaData" > Image Metadata {images[currentImageIndex]?.id} </div>
+          <div class = "ConfidenceLevels" > Confidence Levels {images[currentImageIndex]?.overallConf} </div>
+          <div class = "NumberOfDetections"> Number of Detections {images[currentImageIndex]?.detectionsList.length} </div>
+          <div class = "NoiseFloorMetric"> Noise Floor Metric {images[currentImageIndex]?.noiseFloorMetric} </div>
         </div></div>
 
 
