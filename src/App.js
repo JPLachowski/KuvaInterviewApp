@@ -7,8 +7,9 @@ function App() {
   const baseURL = "http://localhost:7071";
   const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isError, setIsError] = useState(false);
-  const [initialState, setInitialState] = useState;
+  //const [isError, setIsError] = useState(false);
+  //const [initialState, setInitialState] = useState;
+  //const [meta, setMeta] = useState([]);
 
 
   //TODO: API functions (more to be added) should be in their own file!
@@ -18,6 +19,7 @@ function App() {
       .then(function (response) {
         setImages(response.data.scanResults);
         infoList(response.data)// added infolist and the response data
+        //Might need function for meta data display
         console.log(response);
       })
       .catch(function (error) {
@@ -63,8 +65,13 @@ function App() {
           height: "100%",
         }}
       >
-        {/* TODO: This button does nothing!  */}
-        <button type="button">Previous Image</button>
+        {/*This button looks at Previous Image*/}
+        <button type="button" onClick={() => setCurrentImageIndex((prevImage) => 
+        (currentImageIndex === 0? currentImageIndex : currentImageIndex - 1 ))}>
+          Previous Image
+        </button>
+        
+        
         <div>
           <div
             style={{
@@ -80,15 +87,26 @@ function App() {
           {images[currentImageIndex]?.createdOn && (
             <div> Scan Timestamp: {images[currentImageIndex].createdOn} </div>
           )}
-          {/* TODO: Finish adding image metadata!  */}
-          <div> Image Metadata: INCOMPLETE </div>
-          <div> Number of Detections: INCOMPLETE </div>
-        </div>
-        {/* TODO: Done this button will go to the next image when clicked  */}
+
+
+          {/* Finish adding image metadata!
+          //get is display ID, Confidence Levels, Number of detections and noise floor metric
+            */}
+          <div> Image Metadata: {images[currentImageIndex]?.id} </div>
+          <div> Confidence Levels: {images[currentImageIndex]?.overallConf} </div>
+          <div> Number of Detections: {images[currentImageIndex]?.detectionsList.length} </div>
+          <div> Noise Floor Metric: {images[currentImageIndex]?.noiseFloorMetric} </div>
+        </div></div>
+
+
+        {/* Done this button will go to the next image when clicked  
+         //when button is clicked will run function looks at what image we are currently at
+         //then it adds one
+        */}
         <button type="button" onClick={() => setCurrentImageIndex((prevImage) => currentImageIndex + 1)}>Next Image
         </button>
       </div>
-    </div>
+    //</div>
   );
 }
   
